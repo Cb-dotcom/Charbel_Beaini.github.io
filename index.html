@@ -98,7 +98,7 @@
 								<article>
 									<header>
 										<span class="date">Jan 2024 - May 2024</span>
-										<h2><a href="#">MSD2 Project<br />
+										<h2><a href="https://github.com/Ralph-S/GRID/tree/main" target="_blank">MSD2 Project<br />
 											GRID
 										</a></h2>
 									</header>
@@ -133,10 +133,10 @@
 								<article>
 									<header>
 										<span class="date">Jan 2023 - Dec 2023</span>
-										<h2><a href="#">Team Leader at LAUIH<br />
+										<h2><a href="https://news.lau.edu.lb/2023/vertically-integrated-projects-turn-heads-at-the-industry-academia-day.php" target="_blank">Team Leader at LAUIH<br />
 										Semi-Auto Pad Machine</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/industry-academia-vip-2023-01.jpg" alt="" /></a>
+									<a class="image fit"><img src="images/industry-academia-vip-2023-01.jpg" alt="" /></a>
 									<p>We designed and developed a highly efficient semi-automatic sanitary pad machine for an 
 										NGO in Lebanon, managing key elements like actuation, sensing, and PLC programming. 
 										This project applied our theoretical knowledge to a real-world problem, showcasing its 
@@ -144,16 +144,16 @@
 										essential products and demonstrated our capability to innovate and collaborate effectively.
 									</p>
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+										<li><a href="https://news.lau.edu.lb/2023/vertically-integrated-projects-turn-heads-at-the-industry-academia-day.php" target="_blank" class="button">Full Story</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
 										<span class="date">Apr 2023 - May 2023</span>
-										<h2><a href="#">Kinematics Projects<br />
+										<h2><a href="https://github.com/Cb-dotcom/Kinematics-Gravity-Battery-" target="_blank">Kinematics Projects<br />
 										Gravity Battery</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/Gravity Battery.jpeg" alt="" /></a>
+									<a class ="image fit"><img src="images/Gravity Battery.jpeg" alt="" /></a>
 									<p>
 										In this project, we delved into sustainable energy and explored Gravity Batteries,
 										 a novel method of energy storage based on a simple mechanical principle used for decades.
@@ -162,16 +162,16 @@
 										   concept that successfully demonstrated the ability to store energy and light up a bulb through
 										   the conversion of gravitational potential energy.</p>
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+										<li><a href="https://github.com/Cb-dotcom/Kinematics-Gravity-Battery-" target="_blank"class="button">Full Story</a></li>
 									</ul>
 								</article>
 								<article>
 									<header>
 										<span class="date">Nov 2022 - Dec 2022</span>
-										<h2><a href="#">MSD1 Project<br />
+										<h2><a href="https://github.com/Cb-dotcom/MSD1-Project-Magic-Robot" target="_blank">MSD1 Project<br />
 										Magic Robot</a></h2>
 									</header>
-									<a href="#" class="image fit"><img src="images/Magic.jpeg" alt="" /></a>
+									<a class="image fit"><img src="images/Magic.jpeg" alt="" /></a>
 									<p>In this project, I brought together my passion for robotics and magic to create Naboul, 
 										a robot that performs three magic tricks. Equipped with speech recognition, 
 										Naboul listens, speaks, and interacts with the audience. We built him entirely from scratch, 
@@ -179,7 +179,7 @@
 										 wood, and metal hinges. The tricks are executed through the integration of sensors and actuators, 
 										 delivering a captivating and interactive experience.</p>
 									<ul class="actions special">
-										<li><a href="#" class="button">Full Story</a></li>
+										<li><a href="https://github.com/Cb-dotcom/MSD1-Project-Magic-Robot" target="_blank" class="button">Full Story</a></li>
 									</ul>
 								</article>
 							</section>
@@ -220,45 +220,6 @@
 								</ul>
 							</form>
 						</section>
-						<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-
-						<script type="text/javascript">
-						  (function(){
-							// Initialize the EmailJS SDK with your User ID
-							emailjs.init("kM_WYEnQvFt9oQVeCaK1G");
-						  })();
-						
-						  // Function to send the email when the form is submitted
-						  function sendEmail(e) {
-							e.preventDefault(); // Prevent the default form submission behavior
-						
-							// Collect form data
-							const name = document.getElementById('name').value;
-							const email = document.getElementById('email').value;
-							const message = document.getElementById('message').value;
-						
-							// Prepare the parameters to pass to the EmailJS template
-							const templateParams = {
-							  name: name,
-							  email: email,
-							  message: message
-							};
-						
-							// Send email using EmailJS service, template, and user IDs
-							emailjs.send('service_us4p5fn', 'template_xbx3u8a', templateParams)
-							  .then(function(response) {
-								 alert('Email sent successfully!');
-							  }, function(error) {
-								 console.error('Failed to send email:', error);
-								 alert('Failed to send email, please try again later.');
-							  });
-						  }
-						
-						  // Attach the sendEmail function to the form's submit event
-						  document.querySelector('form').addEventListener('submit', sendEmail);
-						</script>
-						
-							
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
@@ -281,6 +242,20 @@
 							</section>
 						</section>
 					</footer>
+					<script>
+						// Function to clear the input fields
+						function clearFields() {
+						  document.getElementById('name').value = '';
+						  document.getElementById('email').value = '';
+						  document.getElementById('message').value = '';
+						}
+					  
+						// Attach the clearFields function to the form's submit event
+						document.querySelector('form').addEventListener('submit', function(e) {
+						  e.preventDefault(); // Prevent default submission
+						  clearFields(); // Clear input fields
+						});
+					  </script>
 
 				<!-- Copyright -->
 					<div id="copyright">
