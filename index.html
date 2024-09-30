@@ -220,6 +220,44 @@
 								</ul>
 							</form>
 						</section>
+						// Load the EmailJS SDK (add this in the <head> or before your script)
+							<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+							
+							<script type="text/javascript">
+							  (function(){
+								// Initialize the EmailJS SDK with your User ID
+								emailjs.init("kM_WYEnQvFt9oQVeCaK1G");
+							  })();
+							
+							  // Function to send the email when the form is submitted
+							  function sendEmail(e) {
+								e.preventDefault(); // Prevent the default form submission behavior
+							
+								// Collect form data
+								const name = document.getElementById('name').value;
+								const email = document.getElementById('email').value;
+								const message = document.getElementById('message').value;
+							
+								// Prepare the parameters to pass to the EmailJS template
+								const templateParams = {
+								  name: name,
+								  email: email,
+								  message: message
+								};
+							
+								// Send email using EmailJS service, template, and user IDs
+								emailjs.send('service_us4p5fn', 'template_xbx3u8a', templateParams)
+								  .then(function(response) {
+									 alert('Email sent successfully!');
+								  }, function(error) {
+									 alert('Failed to send email, please try again later.');
+								  });
+							  }
+							
+							  // Attach the sendEmail function to the form's submit event
+							  document.querySelector('form').addEventListener('submit', sendEmail);
+							</script>
+							
 						<section class="split contact">
 							<section class="alt">
 								<h3>Address</h3>
