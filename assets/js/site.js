@@ -638,24 +638,6 @@
     else new IntersectionObserver(function (e, obs) { if (e[0].isIntersecting) { ignite(); obs.disconnect(); } }, { threshold: 0.35 }).observe(list);
   })();
 
-  /* ---------- optical left edge: line up the ink of the first letter, whatever font the visitor has ---------- */
-  var optical = document.querySelectorAll('[data-optical]');
-  if (optical.length) {
-    var octx = document.createElement('canvas').getContext('2d');
-    var align = function () {
-      Array.prototype.forEach.call(optical, function (el) {
-        var cs = getComputedStyle(el), ch = (el.textContent.trim()[0] || '');
-        octx.font = cs.fontStyle + ' ' + cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
-        var m = octx.measureText(ch);
-        var hang = parseFloat(el.getAttribute('data-hang') || 0) * parseFloat(cs.fontSize);   // big titles look indented even when exact, so pull them back a touch
-        el.style.marginLeft = ((typeof m.actualBoundingBoxLeft === 'number' ? m.actualBoundingBoxLeft : 0) - hang) + 'px';
-      });
-    };
-    align();
-    window.addEventListener('resize', align);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(align);
-  }
-
   /* ---------- contact: copy e-mail ---------- */
   Array.prototype.forEach.call(document.querySelectorAll('.cl-copy'), function (b) {
     b.addEventListener('click', function () {
