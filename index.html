@@ -1,54 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Charbel Beaini — Robotics Engineer</title>
-  <meta name="description" content="Charbel Beaini — Robotics engineer working across hardware and software: ROS2, SLAM, motion planning, C++ and Python.">
+  <meta name="description" content="Charbel Beaini, robotics engineer working across hardware and software: ROS2, SLAM, motion planning, C++ and Python. Builder of QLAUN, WIRELY and GRID.">
   <meta name="theme-color" content="#000000">
+  <meta name="color-scheme" content="dark">
   <meta property="og:title" content="Charbel Beaini — Robotics Engineer">
-  <meta property="og:description" content="Robots built from the ground up: quadrupeds, rescue systems, smart manufacturing.">
-  <meta property="og:image" content="images/QLAUN.jpeg">
+  <meta property="og:description" content="Robots built end to end: a 3D printed research quadruped, self-correcting circuit printing, and a ground and aerial rescue system.">
+  <meta property="og:image" content="https://cb-dotcom.github.io/Charbel_Beaini.github.io/images/QLAUN.jpeg">
   <meta property="og:type" content="website">
-
-  <script>
-    // Apply saved / system theme before paint to avoid a flash.
-    (function () {
-      var t = null;
-      try { t = localStorage.getItem('theme'); } catch (e) {}
-      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.setAttribute('data-theme', t);
-      document.documentElement.classList.add('js');
-    })();
-  </script>
-
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@700&family=Noto+Sans+Devanagari:wght@700&family=Noto+Sans+Bengali:wght@700&family=Noto+Sans+Arabic:wght@700&family=Noto+Sans+JP:wght@700&family=Noto+Sans+Telugu:wght@700&display=swap">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=1793178534">
 </head>
 <body>
   <a class="visually-hidden" href="#main">Skip to content</a>
 
-  <!-- ================= Global nav ================= -->
+  <!-- ============ Local nav (Apple) ============ -->
   <header class="gnav is-over-hero" id="gnav">
     <nav class="gnav-inner" aria-label="Main">
       <a class="gnav-brand" href="#top">Charbel Beaini</a>
       <ul class="gnav-links" id="gnav-links">
         <li><a href="#about">Bio</a></li>
-        <li><a href="#latest">Timeline</a></li>
+        <li><a href="#journey">Timeline</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#toolbox">Toolbox</a></li>
-        <li><a href="#builds">Builds</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="gnav-tools">
-        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme">
-          <svg class="theme-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          <svg class="theme-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-        </button>
+        <span class="icon-btn nav-spacer" aria-hidden="true"></span>
         <button class="icon-btn gnav-menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="gnav-links">
           <span></span><span></span>
         </button>
@@ -58,506 +42,162 @@
 
   <main id="main">
 
-    <!-- ================= Hero ================= -->
-    <section class="hero" id="top" aria-label="Introduction">
-      <div class="wrap">
-        <p class="hero-eyebrow">Charbel Beaini</p>
-        <h1 class="headline-hero">Robots, built from<br>metal to mind.</h1>
-        <p class="hero-sub">Robotics Engineer · ROS2 · SLAM · Motion Planning · Mechatronics</p>
-        <div class="btn-row center">
-          <a class="btn btn-primary" href="#projects">Explore projects</a>
-          <a class="btn btn-ghost on-dark" href="https://github.com/Cb-dotcom?tab=repositories" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
+    <!-- ============ 1. Hero (split: copy | QLAUN maneuvers) ============ -->
+    <section class="hero dark hero--stacked tone-black" id="top" aria-label="Introduction">
+      <div class="hero-split">
+        <div class="hero-copy">
+          <h1 class="headline-hero metal" data-split>Built to move.</h1>
+          <ul class="focus" aria-label="Research interests">
+            <li>World Models</li><li>Embodied Intelligence</li><li>Robot Learning</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#projects">Explore projects</a>
+            <a class="more" href="#contact"><span>Get in touch</span></a>
+          </div>
         </div>
-      </div>
-      <div class="hero-media" id="hero-media">
-        <img src="images/QLAUN.jpeg" width="3840" height="2160" alt="QLAUN, a 3D-printed 12-DoF quadruped robot" loading="eager" decoding="async">
-        <div class="hero-caption"><span><strong>QLAUN</strong> · Modular research quadruped</span><span>2024 — Present</span></div>
+        <div class="hero-stage">
+          <div class="stage-bar">
+            <span class="live"><i></i>QLAUN · 6 maneuvers</span>
+            <a class="more" href="#qlaun"><span>About QLAUN</span></a>
+          </div>
+          <div class="mv-grid" id="mv-grid">
+            <figure class="mv" style="--i:0">
+              <video muted loop playsinline autoplay preload="metadata" poster="media/qlaun/walk.jpg" aria-label="QLAUN walking around"><source src="media/qlaun/walk.mp4" type="video/mp4; codecs=avc1.64001F"><source src="media/qlaun/walk.webm" type="video/webm"></video>
+              <figcaption><span class="mono">01</span>Walk</figcaption>
+            </figure>
+            <figure class="mv" style="--i:1">
+              <video muted loop playsinline autoplay preload="metadata" poster="media/qlaun/pushups.jpg" aria-label="QLAUN doing push-ups"><source src="media/qlaun/pushups.mp4" type="video/mp4; codecs=avc1.64001F"><source src="media/qlaun/pushups.webm" type="video/webm"></video>
+              <figcaption><span class="mono">02</span>Push-ups</figcaption>
+            </figure>
+            <figure class="mv" style="--i:2">
+              <video muted loop playsinline autoplay preload="metadata" poster="media/qlaun/waves.jpg" aria-label="QLAUN making a wave motion with its body"><source src="media/qlaun/waves.mp4" type="video/mp4; codecs=avc1.64001F"><source src="media/qlaun/waves.webm" type="video/webm"></video>
+              <figcaption><span class="mono">03</span>Waves</figcaption>
+            </figure>
+            <figure class="mv" style="--i:3">
+              <video muted loop playsinline autoplay preload="metadata" poster="media/qlaun/roll.jpg" aria-label="QLAUN rotating its body in roll"><source src="media/qlaun/roll.mp4" type="video/mp4; codecs=avc1.64001F"><source src="media/qlaun/roll.webm" type="video/webm"></video>
+              <figcaption><span class="mono">04</span>Roll</figcaption>
+            </figure>
+            <figure class="mv" style="--i:4">
+              <video muted loop playsinline autoplay preload="metadata" poster="media/qlaun/pitch.jpg" aria-label="QLAUN rotating its body in pitch"><source src="media/qlaun/pitch.mp4" type="video/mp4; codecs=avc1.64001F"><source src="media/qlaun/pitch.webm" type="video/webm"></video>
+              <figcaption><span class="mono">05</span>Pitch</figcaption>
+            </figure>
+            <figure class="mv" style="--i:5">
+              <video muted loop playsinline autoplay preload="metadata" poster="media/qlaun/yaw.jpg" aria-label="QLAUN rotating its body in yaw"><source src="media/qlaun/yaw.mp4" type="video/mp4; codecs=avc1.64001F"><source src="media/qlaun/yaw.webm" type="video/webm"></video>
+              <figcaption><span class="mono">06</span>Yaw</figcaption>
+            </figure>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ================= About ================= -->
-    <section class="section" id="about">
+    <!-- ============ 2. Hello (Chenhao) ============ -->
+    <section class="section tone-grey" id="about">
       <div class="wrap about-grid">
         <aside class="about-portrait" data-reveal>
-          <!-- Swap the initials for a photo: <img src="images/profile.jpg" alt="Charbel Beaini"> -->
-          <div class="portrait" aria-hidden="true">CB</div>
+          <div class="portrait"><img src="images/profile.jpg" width="200" height="200" alt="Charbel Beaini" decoding="async"></div>
           <p class="name">Charbel Beaini</p>
-          <p class="role">Robotics Engineer</p>
-          <ul class="org-list">
-            <li>Beirut, Lebanon</li>
-          </ul>
+          <p class="role">Master’s student in Robotics Engineering <a class="at" href="https://corsi.unige.it/en/corsi/11963" target="_blank" rel="noopener" title="Master’s degree in Robotics Engineering, University of Genoa">@UniGe</a></p>
           <ul class="social">
             <li><a href="mailto:charbelbeaini.cb@gmail.com" aria-label="E-mail" title="E-mail"><i class="fa-solid fa-at" aria-hidden="true"></i></a></li>
+            <li><a href="https://x.com/cb_dotcom" target="_blank" rel="noopener" aria-label="X" title="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a></li>
             <li><a href="https://github.com/Cb-dotcom?tab=repositories" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
             <li><a href="https://www.linkedin.com/in/charbel-beaini-profile/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin" aria-hidden="true"></i></a></li>
           </ul>
         </aside>
 
         <div class="about-bio">
-          <h2 class="headline-section" data-reveal>Hello, I’m <span class="gradient-text">Charbel</span>.</h2>
-          <div class="bio-lead" data-reveal style="--i:1">
-            <p>I’m a robotics engineer who works on <strong>both hardware and software</strong>, specializing in <strong>ROS2</strong> — SLAM, motion planning and more — with <strong>C++</strong> and <strong>Python</strong>. I design complex mechanical and electrical systems where precision and function come first.</p>
+          <div class="hello" data-reveal>
+            <h2 class="headline-section hello-box" aria-label="Hello, I’m Charbel."><span class="hello-text" aria-hidden="true">Hello, I’m Charbel.</span></h2>
+            <p class="hello-lang" aria-hidden="true"><span class="hello-name">English</span></p>
           </div>
-          <div class="bio-cards">
-            <div class="bio-card" data-reveal style="--i:0">
-              <h3>Now</h3>
-              <p>Designing and building <strong>QLAUN</strong>, a modular, fully 3D-printed quadruped for research in Lebanon and the MENA region — exploring <strong>Model Predictive Control</strong> and <strong>Reinforcement Learning</strong> for agile, energy-efficient locomotion.</p>
+          <div class="np" data-np aria-roledescription="carousel" aria-label="In progress">
+            <div class="np-stage" aria-live="polite"></div>
+            <div class="np-controls">
+              <div class="hl-dots np-dots" role="tablist" aria-label="Choose an item"></div>
+              <button class="hl-play np-play" type="button" aria-pressed="true" aria-label="Pause autoplay">
+                <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+                <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.4-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5z"/></svg>
+              </button>
             </div>
-            <div class="bio-card" data-reveal style="--i:1">
-              <h3>Previously</h3>
-              <p>Built an autonomous maze-solving robot as a <strong>robotics intern</strong>, led a team at <strong>LAUIH</strong> delivering a semi-automatic production machine for an NGO, and engineered a <strong>UGV + UAV</strong> search-and-rescue system.</p>
-            </div>
-          </div>
-          <ul class="interest-list" data-reveal aria-label="Interests">
-            <li>Legged Locomotion</li>
-            <li>SLAM &amp; Motion Planning</li>
-            <li>Reinforcement Learning</li>
-            <li>Mechatronic Design</li>
-          </ul>
-          <div class="btn-row" data-reveal>
-            <a class="btn btn-primary" href="#projects">See my work</a>
-            <a class="more" href="#contact">Get in touch</a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ================= The latest ================= -->
-    <section class="section alt" id="latest">
+    <!-- ============ 3. Highlights (split cards, open into a detail view) ============ -->
+    <section class="section dark highlights tone-black" id="projects" aria-label="Project highlights">
+      <div class="wrap section-head section-head-row">
+        <h2>Get the highlights.</h2>
+        <a class="more" href="#journey"><span>See the full journey</span></a>
+      </div>
+      <div class="hl" data-hl>
+        <div class="hl-track" role="list" id="hl-track"></div>
+        <div class="hl-controls">
+          <div class="hl-dots" role="tablist" aria-label="Choose a highlight"></div>
+          <button class="hl-play" type="button" aria-pressed="true" aria-label="Pause autoplay">
+            <svg class="i-pause" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><rect x="3.5" y="2.5" width="3" height="11" rx="1"/><rect x="9.5" y="2.5" width="3" height="11" rx="1"/></svg>
+            <svg class="i-play" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M4.5 2.8v10.4a.6.6 0 0 0 .9.5l8.4-5.2a.6.6 0 0 0 0-1L5.4 2.3a.6.6 0 0 0-.9.5z"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <dialog class="detail" id="detail" aria-labelledby="dt-title">
+      <div class="dt-bar">
+        <button class="dt-back" type="button" data-close><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg>Highlights</button>
+        <button class="dt-x" type="button" data-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9"/></svg></button>
+      </div>
+      <div class="dt-content"></div>
+    </dialog>
+
+
+
+
+    <!-- ============ 6. Journey (branch graph timeline) ============ -->
+    <section class="section tone-grey" id="journey" aria-labelledby="journey-h">
       <div class="wrap-wide">
         <div class="section-head" data-reveal>
-          <h2 class="headline-section">The latest.</h2>
-          <p class="lead">Projects, roles and milestones, year by year.</p>
-        </div>
-        <div class="year-nav" role="group" aria-label="Jump to year" data-reveal>
-          <button class="year-pill" type="button" data-jump-year="2024" aria-pressed="true">2024</button>
-          <button class="year-pill" type="button" data-jump-year="2023" aria-pressed="false">2023</button>
-          <button class="year-pill" type="button" data-jump-year="2022" aria-pressed="false">2022</button>
-        </div>
-      </div>
-
-      <div class="carousel" data-carousel data-reveal="fade">
-        <div class="carousel-track news-track" role="list">
-
-          <div class="news-year" role="listitem" data-year-marker="2024">
-            <span class="news-year-num">2024</span>
-            <span class="news-year-meta">3 projects<br>2 milestones</span>
+          <h2 class="headline-m" id="journey-h">The journey.</h2>
+          <div class="jr-legend" aria-label="Legend">
+            <span><i class="lg lg-place"></i>Place</span>
+            <span><i class="lg lg-step"></i>Project</span>
+            <span><i class="lg lg-live"></i>Ongoing</span>
+            <span><i class="lg lg-next"></i>Next</span>
           </div>
-
-          <button class="news-card highlight" type="button" role="listitem" data-year="2024" data-sheet="n-qlaun">
-            <span class="eyebrow">Feb 2024 <span class="badge">Milestone</span></span>
-            <h3>Started undergraduate research on QLAUN.</h3>
-            <div class="body">A modular, cost-effective, robust and agile quadruped robot — fully 3D-printed with 12 DoF and designed for a payload-to-weight ratio above unity.</div>
-            <span class="more">Read more</span>
-          </button>
-          <template id="n-qlaun">
-            <span class="eyebrow accent">Feb 2024 — Present</span>
-            <h2>Undergraduate research: QLAUN.</h2>
-            <div class="body">
-              <p>We are designing and developing QLAUN, a modular, cost-effective, robust and agile quadruped robot. Built for research, QLAUN fills the gap in affordable, research-grade quadrupeds in Lebanon and the MENA region.</p>
-              <p>The robot is fully 3D-printed with 12 Degrees of Freedom and designed to achieve a payload-to-weight ratio of over unity. It is modular, with easily interchangeable parts and legs.</p>
-              <p>We are exploring Model Predictive Control and Reinforcement Learning, optimizing energy efficiency across gaits, and developing a novel leg architecture for mobility, agility and robustness.</p>
-              <p><a href="https://qlaun.moudallal.com/index.html" target="_blank" rel="noopener">Visit the project site ›</a></p>
-            </div>
-          </template>
-
-          <button class="news-card highlight" type="button" role="listitem" data-year="2024" data-sheet="n-wirely">
-            <span class="eyebrow">Jan 2024 <span class="badge">Milestone</span></span>
-            <h3>Kicked off WIRELY, my final year project.</h3>
-            <div class="body">Circuit printing that combines 3D printing with conductive PLA and real-time correction driven by a deep learning model.</div>
-            <span class="more">Read more</span>
-          </button>
-          <template id="n-wirely">
-            <span class="eyebrow accent">Jan 2024 — Present</span>
-            <h2>Final Year Project: WIRELY.</h2>
-            <div class="body">
-              <p>WIRELY integrates 3D printing with conductive PLA and real-time correction. The system dynamically adjusts printing parameters based on a deep learning model, optimizing quality and reducing defects.</p>
-              <p>A digital twin provides real-time monitoring and two-way communication, supporting flexible, high-precision thermoformed circuit boards.</p>
-              <p><a href="https://linktr.ee/wirely" target="_blank" rel="noopener">Learn more ›</a></p>
-            </div>
-          </template>
-
-          <button class="news-card" type="button" role="listitem" data-year="2024" data-sheet="n-grid">
-            <span class="eyebrow">May 2024</span>
-            <h3>Delivered GRID, a ground + aerial rescue system.</h3>
-            <div class="body">A UAV captures and segments terrain with UNET while a UGV follows an optimal A* path, detecting people with a thermal camera.</div>
-            <span class="more">Read more</span>
-          </button>
-          <template id="n-grid">
-            <span class="eyebrow accent">Jan 2024 — May 2024</span>
-            <h2>MSD2 Project: GRID.</h2>
-            <div class="body">
-              <p>GRID (Ground and Aerial Integrated Deployment) is a rescue system integrating an unmanned ground vehicle and an aerial vehicle for search and rescue missions.</p>
-              <p>The UAV captures images, segmented by UNET, while the UGV follows an optimal path using A* and navigates obstacles autonomously. A thermal camera detects individuals, with strong radio links for difficult conditions.</p>
-              <p><a href="https://github.com/Ralph-S/GRID/tree/main" target="_blank" rel="noopener">View on GitHub ›</a></p>
-            </div>
-          </template>
-
-          <div class="news-year" role="listitem" data-year-marker="2023">
-            <span class="news-year-num">2023</span>
-            <span class="news-year-meta">3 projects<br>1 showcase</span>
-          </div>
-
-          <button class="news-card" type="button" role="listitem" data-year="2023" data-sheet="n-pad">
-            <span class="eyebrow">Dec 2023 <span class="badge">Showcase</span></span>
-            <h3>Presented our pad machine at VIP+ Industry-Academia Day.</h3>
-            <div class="body">As team leader at LAUIH, delivered a semi-automatic sanitary pad machine for an NGO in Lebanon — actuation, sensing and PLC programming.</div>
-            <span class="more">Read more</span>
-          </button>
-          <template id="n-pad">
-            <span class="eyebrow accent">Jan 2023 — Dec 2023</span>
-            <h2>Team Leader at LAUIH: Semi-Auto Pad Machine.</h2>
-            <div class="body">
-              <p>We designed and developed a highly efficient semi-automatic sanitary pad machine for an NGO in Lebanon, managing actuation, sensing and PLC programming.</p>
-              <p>The project was showcased at the VIP+ Industry-Academia Day, aiming to improve access to essential products.</p>
-              <p><a href="https://news.lau.edu.lb/2023/vertically-integrated-projects-turn-heads-at-the-industry-academia-day.php" target="_blank" rel="noopener">Read the coverage ›</a></p>
-            </div>
-          </template>
-
-          <button class="news-card" type="button" role="listitem" data-year="2023" data-sheet="n-maze">
-            <span class="eyebrow">Jun 2023</span>
-            <h3>Joined a robotics internship building an autonomous Mazebot.</h3>
-            <div class="body">Pathfinding, sensor fusion and firmware with Python, C++ and ROS — from simulation to real hardware.</div>
-            <span class="more">Read more</span>
-          </button>
-          <template id="n-maze">
-            <span class="eyebrow accent">Jun 2023 — Aug 2023</span>
-            <h2>Robotics Intern: Autonomous Mazebot.</h2>
-            <div class="body">
-              <p>As part of a team, we developed an autonomous robot that solves complex mazes, focusing on navigation and control through advanced pathfinding algorithms, simulation and hardware integration.</p>
-              <p>Built with Python, C++ and ROS, the work covered simulators, sensor fusion and firmware development.</p>
-              <p><a href="https://github.com/robotcraft19" target="_blank" rel="noopener">View on GitHub ›</a></p>
-            </div>
-          </template>
-
-          <button class="news-card" type="button" role="listitem" data-year="2023" data-sheet="n-gravity">
-            <span class="eyebrow">Apr 2023</span>
-            <h3>Built a working gravity battery proof of concept.</h3>
-            <div class="body">Simulated in SolidWorks and MATLAB, then built to store energy and light a bulb from gravitational potential energy.</div>
-            <span class="more">Read more</span>
-          </button>
-          <template id="n-gravity">
-            <span class="eyebrow accent">Apr 2023 — May 2023</span>
-            <h2>Kinematics Project: Gravity Battery.</h2>
-            <div class="body">
-              <p>We explored gravity batteries — energy storage based on a simple mechanical principle. After extensive research, we simulated the concept in SolidWorks and MATLAB, applying our knowledge of gears, chains and belts.</p>
-              <p>The proof of concept successfully stored energy and lit a bulb by converting gravitational potential energy.</p>
-              <p><a href="https://github.com/Cb-dotcom/Kinematics-Gravity-Battery-" target="_blank" rel="noopener">View on GitHub ›</a></p>
-            </div>
-          </template>
-
-          <div class="news-year" role="listitem" data-year-marker="2022">
-            <span class="news-year-num">2022</span>
-            <span class="news-year-meta">1 project</span>
-          </div>
-
-          <button class="news-card" type="button" role="listitem" data-year="2022" data-sheet="n-magic">
-            <span class="eyebrow">Nov 2022</span>
-            <h3>Met Naboul, the robot that does magic.</h3>
-            <div class="body">A from-scratch robot that listens, speaks and performs three magic tricks with speech recognition, sensors and actuators.</div>
-            <span class="more">Read more</span>
-          </button>
-          <template id="n-magic">
-            <span class="eyebrow accent">Nov 2022 — Dec 2022</span>
-            <h2>MSD1 Project: Magic Robot.</h2>
-            <div class="body">
-              <p>I brought together robotics and magic to create Naboul, a robot that performs three magic tricks. With speech recognition, Naboul listens, speaks and interacts with the audience.</p>
-              <p>We built him from scratch — from the structure to the magic mechanisms — using cardboard, wood and metal hinges, with sensors and actuators driving each trick.</p>
-              <p><a href="https://github.com/Cb-dotcom/MSD1-Project-Magic-Robot" target="_blank" rel="noopener">View on GitHub ›</a></p>
-            </div>
-          </template>
-
         </div>
-        <div class="carousel-nav">
-          <button class="carousel-btn" type="button" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
-          <button class="carousel-btn" type="button" data-dir="1" aria-label="Next"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+        <div class="jr" id="jr">
+          <div class="jr-graph">
+            <p class="jr-hint" aria-hidden="true"><i class="fa-solid fa-hand-pointer"></i>Tap a place for everything from there, or a single project</p>
+            <div class="jr-list" role="list">
+              <svg class="jr-svg" aria-hidden="true"></svg>
+            </div>
+          </div>
+          <aside class="jr-side" aria-live="polite">
+            <div class="jr-panel"></div>
+          </aside>
         </div>
       </div>
     </section>
 
-    <!-- ================= Featured projects ================= -->
-    <section class="section" id="projects">
-      <div class="wrap-wide">
-        <div class="section-head" data-reveal>
-          <h2 class="headline-section">Featured projects.</h2>
-          <p class="lead">Robots and systems built end to end — mechanics, electronics, control and software.</p>
-        </div>
 
-        <div class="tile-grid">
-          <article class="tile feature" data-reveal>
-            <div class="tile-media"><img src="images/QLAUN.jpeg" width="3840" height="2160" alt="QLAUN quadruped robot" loading="lazy" decoding="async"></div>
-            <div class="tile-body">
-              <span class="eyebrow accent">Undergraduate Research · 2024 — Present</span>
-              <h3 class="headline-tile"><a href="https://qlaun.moudallal.com/index.html" target="_blank" rel="noopener">QLAUN: A Modular, Agile and Affordable Research Quadruped</a></h3>
-              <p class="role-line"><strong>Charbel Beaini</strong> &amp; the QLAUN team</p>
-              <p class="summary">A fully 3D-printed, 12-DoF quadruped with a payload-to-weight ratio above unity. Simulated in ROS with RViz, Gazebo and CHAMP to size the battery, estimate SOC and optimize energy across gaits — now exploring MPC and Reinforcement Learning.</p>
-              <div class="tile-links">
-                <a class="chip" href="https://qlaun.moudallal.com/index.html" target="_blank" rel="noopener"><i class="fa-solid fa-globe" aria-hidden="true"></i>Project</a>
-                <span class="chip"><i class="fa-solid fa-robot" aria-hidden="true"></i>ROS · Gazebo · CHAMP</span>
-              </div>
-            </div>
-          </article>
 
-          <article class="tile" data-reveal style="--i:0">
-            <div class="tile-media logo"><img src="images/Wirely_Logo.JPG" width="508" height="310" alt="WIRELY logo" loading="lazy" decoding="async"></div>
-            <div class="tile-body">
-              <span class="eyebrow accent">Final Year Project · 2024 — Present</span>
-              <h3 class="headline-tile"><a href="https://linktr.ee/wirely" target="_blank" rel="noopener">WIRELY: Self-Correcting 3D-Printed Circuits</a></h3>
-              <p class="summary">Conductive-PLA circuit printing with a deep-learning model that adjusts print parameters in real time, plus a digital twin for live monitoring.</p>
-              <div class="tile-links">
-                <a class="chip" href="https://linktr.ee/wirely" target="_blank" rel="noopener"><i class="fa-solid fa-globe" aria-hidden="true"></i>Project</a>
-              </div>
-            </div>
-          </article>
 
-          <article class="tile" data-reveal style="--i:1">
-            <div class="tile-media"><img src="images/GRID.png" width="508" height="310" alt="GRID ground and aerial rescue robots" loading="lazy" decoding="async"></div>
-            <div class="tile-body">
-              <span class="eyebrow accent">MSD2 Project · 2024</span>
-              <h3 class="headline-tile"><a href="https://github.com/Ralph-S/GRID/tree/main" target="_blank" rel="noopener">GRID: Ground and Aerial Integrated Deployment</a></h3>
-              <p class="summary">UAV imagery segmented by UNET guides a UGV along an A* path, with thermal detection of people for search and rescue.</p>
-              <div class="tile-links">
-                <a class="chip" href="https://github.com/Ralph-S/GRID/tree/main" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a>
-              </div>
-            </div>
-          </article>
+    <!-- ============ Contact ============ -->
+    <section class="section contact tone-black" id="contact" aria-labelledby="contact-h">
+      <div class="wrap-wide contact-grid">
+        <div class="contact-copy" data-reveal>
+          <h2 class="contact-h" id="contact-h">Your <span class="hi">move.</span></h2>
+          <p class="lead">If you’ve made it this far, I’m sure we’ll get along. Make sure to reach out, I’m always open to interesting ideas, projects and conversations.</p>
         </div>
-
-        <!-- All projects -->
-        <div class="section-head list-head" data-reveal>
-          <h2 class="headline-section">All projects.</h2>
-        </div>
-        <div class="pub-filters" role="group" aria-label="Filter projects" data-reveal>
-          <button class="pub-filter" type="button" data-filter="all" aria-pressed="true">All<span>6</span></button>
-          <button class="pub-filter" type="button" data-filter="research" aria-pressed="false">Research<span>2</span></button>
-          <button class="pub-filter" type="button" data-filter="academic" aria-pressed="false">Academic<span>3</span></button>
-          <button class="pub-filter" type="button" data-filter="industry" aria-pressed="false">Industry<span>1</span></button>
-        </div>
-
-        <div class="pubs">
-          <div class="pub-group" data-reveal>
-            <div class="pub-year">2024</div>
-            <ul class="pub-list">
-              <li class="pub-item" data-kind="research">
-                <h4><a href="https://qlaun.moudallal.com/index.html" target="_blank" rel="noopener">QLAUN — Modular, agile, cost-effective quadruped robot</a></h4>
-                <p class="desc">3D printing · 12 DoF · ROS · RViz · Gazebo · CHAMP · MPC · RL</p>
-                <div class="pub-meta"><span class="pub-venue">Research</span><a class="pub-link" href="https://qlaun.moudallal.com/index.html" target="_blank" rel="noopener"><i class="fa-solid fa-globe" aria-hidden="true"></i>Project</a></div>
-              </li>
-              <li class="pub-item" data-kind="research">
-                <h4><a href="https://linktr.ee/wirely" target="_blank" rel="noopener">WIRELY — Real-time corrected circuit printing with conductive PLA</a></h4>
-                <p class="desc">3D printing · Deep learning · Digital twin</p>
-                <div class="pub-meta"><span class="pub-venue">Final Year Project</span><a class="pub-link" href="https://linktr.ee/wirely" target="_blank" rel="noopener"><i class="fa-solid fa-globe" aria-hidden="true"></i>Project</a></div>
-              </li>
-              <li class="pub-item" data-kind="academic">
-                <h4><a href="https://github.com/Ralph-S/GRID/tree/main" target="_blank" rel="noopener">GRID — Ground and Aerial Integrated Deployment for search &amp; rescue</a></h4>
-                <p class="desc">UAV · UGV · UNET · A* · Thermal imaging</p>
-                <div class="pub-meta"><span class="pub-venue">MSD2</span><a class="pub-link" href="https://github.com/Ralph-S/GRID/tree/main" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div>
-              </li>
-            </ul>
-          </div>
-          <div class="pub-group" data-reveal>
-            <div class="pub-year">2023</div>
-            <ul class="pub-list">
-              <li class="pub-item" data-kind="industry">
-                <h4><a href="https://news.lau.edu.lb/2023/vertically-integrated-projects-turn-heads-at-the-industry-academia-day.php" target="_blank" rel="noopener">Semi-Automatic Sanitary Pad Machine for an NGO in Lebanon</a></h4>
-                <p class="desc">Team Leader at LAUIH · Actuation · Sensing · PLC programming</p>
-                <div class="pub-meta"><span class="pub-venue">VIP+ Industry-Academia Day</span><a class="pub-link" href="https://news.lau.edu.lb/2023/vertically-integrated-projects-turn-heads-at-the-industry-academia-day.php" target="_blank" rel="noopener"><i class="fa-regular fa-newspaper" aria-hidden="true"></i>Article</a></div>
-              </li>
-              <li class="pub-item" data-kind="academic">
-                <h4><a href="https://github.com/robotcraft19" target="_blank" rel="noopener">Autonomous Mazebot</a></h4>
-                <p class="desc">Robotics internship · Python · C++ · ROS · Sensor fusion · Firmware</p>
-                <div class="pub-meta"><span class="pub-venue">Internship</span><a class="pub-link" href="https://github.com/robotcraft19" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div>
-              </li>
-              <li class="pub-item" data-kind="academic">
-                <h4><a href="https://github.com/Cb-dotcom/Kinematics-Gravity-Battery-" target="_blank" rel="noopener">Gravity Battery — Mechanical energy storage proof of concept</a></h4>
-                <p class="desc">SolidWorks · MATLAB · Gears, chains &amp; belts</p>
-                <div class="pub-meta"><span class="pub-venue">Kinematics</span><a class="pub-link" href="https://github.com/Cb-dotcom/Kinematics-Gravity-Battery-" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div>
-              </li>
-            </ul>
-          </div>
-          <div class="pub-group" data-reveal>
-            <div class="pub-year">2022</div>
-            <ul class="pub-list">
-              <li class="pub-item" data-kind="academic">
-                <h4><a href="https://github.com/Cb-dotcom/MSD1-Project-Magic-Robot" target="_blank" rel="noopener">Naboul — An interactive robot that performs magic tricks</a></h4>
-                <p class="desc">Speech recognition · Sensors · Actuators · Mechanism design</p>
-                <div class="pub-meta"><span class="pub-venue">MSD1</span><a class="pub-link" href="https://github.com/Cb-dotcom/MSD1-Project-Magic-Robot" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>Code</a></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= Experience ================= -->
-    <section class="section alt" id="experience">
-      <div class="wrap-wide">
-        <div class="section-head" data-reveal>
-          <h2 class="headline-section">Experience.</h2>
-          <p class="lead">Teams and roles where I learned by building.</p>
-        </div>
-        <div class="exp-cols">
-          <div class="exp-col">
-            <h3 data-reveal>Research &amp; work</h3>
-            <article class="exp-card" data-reveal>
-              <div class="exp-logo"><i class="fa-solid fa-dog" aria-hidden="true"></i></div>
-              <div>
-                <span class="when">Feb 2024 – <span class="now">Present</span></span>
-                <h4>Undergraduate Researcher</h4>
-                <p class="org">QLAUN Quadruped Project</p>
-                <p class="desc">Mechanical design, ROS simulation, energy optimization, MPC &amp; RL control.</p>
-              </div>
-            </article>
-            <article class="exp-card" data-reveal>
-              <div class="exp-logo"><i class="fa-solid fa-route" aria-hidden="true"></i></div>
-              <div>
-                <span class="when">Jun 2023 – Aug 2023</span>
-                <h4>Robotics Intern</h4>
-                <p class="org">Autonomous Mazebot</p>
-                <p class="desc">Pathfinding, sensor fusion and firmware with Python, C++ and ROS.</p>
-              </div>
-            </article>
-            <article class="exp-card" data-reveal>
-              <div class="exp-logo"><i class="fa-solid fa-gears" aria-hidden="true"></i></div>
-              <div>
-                <span class="when">Jan 2023 – Dec 2023</span>
-                <h4>Team Leader</h4>
-                <p class="org">LAUIH · Vertically Integrated Projects</p>
-                <p class="desc">Led a semi-automatic production machine for an NGO — actuation, sensing, PLC.</p>
-              </div>
-            </article>
-          </div>
-          <div class="exp-col">
-            <h3 data-reveal>Academic projects</h3>
-            <article class="exp-card" data-reveal>
-              <div class="exp-logo"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-              <div>
-                <span class="when">Jan 2024 – <span class="now">Present</span></span>
-                <h4>Final Year Project</h4>
-                <p class="org">WIRELY</p>
-                <p class="desc">Deep-learning-corrected circuit printing with a digital twin.</p>
-              </div>
-            </article>
-            <article class="exp-card" data-reveal>
-              <div class="exp-logo"><i class="fa-solid fa-helicopter" aria-hidden="true"></i></div>
-              <div>
-                <span class="when">Jan 2024 – May 2024</span>
-                <h4>MSD2 Project</h4>
-                <p class="org">GRID</p>
-                <p class="desc">Integrated UGV + UAV system for search and rescue.</p>
-              </div>
-            </article>
-            <article class="exp-card" data-reveal>
-              <div class="exp-logo"><i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i></div>
-              <div>
-                <span class="when">Nov 2022 – Dec 2022</span>
-                <h4>MSD1 Project</h4>
-                <p class="org">Naboul, the Magic Robot</p>
-                <p class="desc">Speech-driven robot performing three mechanized magic tricks.</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= Toolbox (dark) ================= -->
-    <section class="section dark" id="toolbox">
-      <div class="wrap-wide">
-        <div class="section-head" data-reveal>
-          <h2 class="headline-section">Toolbox.</h2>
-          <p class="lead">The stack I reach for, from CAD to control loop.</p>
-        </div>
-      </div>
-      <div class="carousel" data-carousel data-reveal="fade">
-        <div class="carousel-track" role="list">
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#22314e"><i class="fa-solid fa-robot" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Robotics</span><h3>ROS2</h3><p>SLAM, motion planning, RViz &amp; Gazebo simulation, CHAMP.</p></div>
-          </article>
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#1d4f91"><i class="fa-solid fa-code" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Language</span><h3>C++</h3><p>Real-time control, firmware and ROS nodes.</p></div>
-          </article>
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#2b5b84"><i class="fa-brands fa-python" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Language</span><h3>Python</h3><p>Pathfinding, deep learning (UNET), tooling and data.</p></div>
-          </article>
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#1a8a7a"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Control &amp; learning</span><h3>MPC · RL</h3><p>Model Predictive Control and Reinforcement Learning for locomotion.</p></div>
-          </article>
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#8a2d2d"><i class="fa-solid fa-cube" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Design</span><h3>SolidWorks</h3><p>Mechanical design, mechanisms and 3D-printed structures.</p></div>
-          </article>
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#b8561b"><i class="fa-solid fa-wave-square" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Analysis</span><h3>MATLAB</h3><p>Kinematics, simulation and system modeling.</p></div>
-          </article>
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#4a4a4f"><i class="fa-solid fa-microchip" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Electronics</span><h3>PLC · Sensors · Actuators</h3><p>Electrical design, sensing and industrial automation.</p></div>
-          </article>
-          <article class="tool-card" role="listitem">
-            <div class="tool-media" style="--c:#0b6fb8"><i class="fa-brands fa-docker" aria-hidden="true"></i></div>
-            <div class="tool-body"><span class="eyebrow">Workflow</span><h3>Docker · Git</h3><p>Reproducible, streamlined software development.</p></div>
-          </article>
-        </div>
-        <div class="carousel-nav">
-          <button class="carousel-btn" type="button" data-dir="-1" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
-          <button class="carousel-btn" type="button" data-dir="1" aria-label="Next"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= Builds ================= -->
-    <section class="section" id="builds">
-      <div class="wrap-wide">
-        <div class="section-head" data-reveal>
-          <h2 class="headline-section">Things I’ve built.</h2>
-          <p class="lead">The machines behind the projects.</p>
-        </div>
-        <div class="platform-grid">
-          <a class="platform" href="https://qlaun.moudallal.com/index.html" target="_blank" rel="noopener" data-reveal style="--i:0">
-            <img src="images/QLAUN.jpeg" alt="" loading="lazy" decoding="async">
-            <div class="platform-body"><span class="year">Since 2024</span><h3>QLAUN</h3><p>12-DoF, fully 3D-printed research quadruped.</p></div>
-          </a>
-          <a class="platform" href="https://github.com/Ralph-S/GRID/tree/main" target="_blank" rel="noopener" data-reveal style="--i:1">
-            <img src="images/GRID.png" alt="" loading="lazy" decoding="async">
-            <div class="platform-body"><span class="year">2024</span><h3>GRID UGV + UAV</h3><p>Autonomous ground-aerial search and rescue.</p></div>
-          </a>
-          <a class="platform" href="https://github.com/robotcraft19" target="_blank" rel="noopener" data-reveal style="--i:2">
-            <img src="images/hi.png" alt="" loading="lazy" decoding="async">
-            <div class="platform-body"><span class="year">2023</span><h3>Mazebot</h3><p>Autonomous maze-solving robot on ROS.</p></div>
-          </a>
-          <a class="platform" href="https://news.lau.edu.lb/2023/vertically-integrated-projects-turn-heads-at-the-industry-academia-day.php" target="_blank" rel="noopener" data-reveal style="--i:0">
-            <img src="images/industry-academia-vip-2023-01.jpg" alt="" loading="lazy" decoding="async">
-            <div class="platform-body"><span class="year">2023</span><h3>Pad Machine</h3><p>PLC-driven semi-automatic production line.</p></div>
-          </a>
-          <a class="platform" href="https://github.com/Cb-dotcom/Kinematics-Gravity-Battery-" target="_blank" rel="noopener" data-reveal style="--i:1">
-            <img src="images/Gravity Battery.jpeg" alt="" loading="lazy" decoding="async">
-            <div class="platform-body"><span class="year">2023</span><h3>Gravity Battery</h3><p>Stores energy as height, releases it as light.</p></div>
-          </a>
-          <a class="platform" href="https://github.com/Cb-dotcom/MSD1-Project-Magic-Robot" target="_blank" rel="noopener" data-reveal style="--i:2">
-            <img src="images/Magic.jpeg" alt="" loading="lazy" decoding="async">
-            <div class="platform-body"><span class="year">2022</span><h3>Naboul</h3><p>A talking robot magician, built from scratch.</p></div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= Contact ================= -->
-    <section class="section alt contact" id="contact">
-      <div class="wrap">
-        <h2 class="headline-hero" data-reveal>Let’s <span class="gradient-text">connect.</span></h2>
-        <p class="lead" data-reveal style="--i:1">I’m always happy to talk about robots, research collaborations, or anything in between.</p>
-        <div class="btn-row center" data-reveal style="--i:2">
-          <a class="btn btn-primary" href="mailto:charbelbeaini.cb@gmail.com"><i class="fa-solid fa-at" aria-hidden="true"></i>E-mail</a>
-          <a class="btn btn-secondary" href="https://www.linkedin.com/in/charbel-beaini-profile/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i>Connect</a>
-          <a class="btn btn-secondary" href="https://github.com/Cb-dotcom?tab=repositories" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a>
-        </div>
-        <p class="contact-meta" data-reveal style="--i:3">Beirut, Lebanon · <a href="tel:+96176794719">+961 76 794 719</a></p>
+        <ul class="contact-list" data-reveal style="--i:1">
+          <li class="cl-mail">
+            <a href="mailto:charbelbeaini.cb@gmail.com"><i class="fa-solid fa-at" aria-hidden="true"></i><span class="cl-k">E-mail</span><span class="cl-v">charbelbeaini.cb@gmail.com</span><span class="cl-go" aria-hidden="true">›</span></a>
+            <button class="cl-copy" type="button" data-copy="charbelbeaini.cb@gmail.com" aria-label="Copy e-mail address"><i class="fa-regular fa-copy" aria-hidden="true"></i><span>Copy</span></button>
+          </li>
+          <li><a href="https://www.linkedin.com/in/charbel-beaini-profile/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin" aria-hidden="true"></i><span class="cl-k">LinkedIn</span><span class="cl-v">charbel-beaini-profile</span><span class="cl-go" aria-hidden="true">›</span></a></li>
+          <li><a href="https://github.com/Cb-dotcom?tab=repositories" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i><span class="cl-k">GitHub</span><span class="cl-v">Cb-dotcom</span><span class="cl-go" aria-hidden="true">›</span></a></li>
+          <li><a href="https://x.com/cb_dotcom" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span class="cl-k">X</span><span class="cl-v">@cb_dotcom</span><span class="cl-go" aria-hidden="true">›</span></a></li>
+        </ul>
       </div>
     </section>
   </main>
@@ -565,17 +205,12 @@
   <footer class="footer">
     <div class="footer-inner">
       <span>Copyright © <span id="year">2026</span> Charbel Beaini. All rights reserved.</span>
-      <nav aria-label="Footer">
-        <a href="#about">Bio</a><a href="#latest">Timeline</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#toolbox">Toolbox</a><a href="#builds">Builds</a><a href="#contact">Contact</a>
-      </nav>
+      <nav aria-label="Footer"><a href="#about">Bio</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a></nav>
     </div>
   </footer>
 
-  <dialog class="sheet" id="sheet" aria-label="Details">
-    <button class="sheet-close" type="button" data-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 3l10 10M13 3 3 13"/></svg></button>
-    <div class="sheet-content"></div>
-  </dialog>
-
-  <script src="assets/js/site.js"></script>
+  <script src="assets/js/projects-data.js?v=1793178534"></script>
+  <script src="assets/js/timeline-data.js?v=1793178534"></script>
+  <script src="assets/js/site.js?v=1793178534"></script>
 </body>
 </html>
