@@ -647,8 +647,7 @@
         var cs = getComputedStyle(el), ch = (el.textContent.trim()[0] || '');
         octx.font = cs.fontStyle + ' ' + cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
         var m = octx.measureText(ch);
-        var lean = /[AVWYTJ]/.test(ch) ? parseFloat(cs.fontSize) * 0.03 : 0;   // diagonals only touch the edge at a tip, so hang them a hair
-        el.style.marginLeft = ((typeof m.actualBoundingBoxLeft === 'number' ? m.actualBoundingBoxLeft : 0) - lean) + 'px';
+        el.style.marginLeft = (typeof m.actualBoundingBoxLeft === 'number' ? m.actualBoundingBoxLeft : 0) + 'px';
       });
     };
     align();

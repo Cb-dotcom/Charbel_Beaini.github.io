@@ -99,6 +99,9 @@ a:hover { text-decoration: underline; }
 h1, h2, h3, h4, p { margin: 0; }
 h1, h2, h3, h4 { color: var(--text); text-wrap: balance; }
 p { text-wrap: pretty; }
+/* body text is justified everywhere; hyphenation keeps the spacing even. Labels, names and centred lines stay as they are. */
+p, .dt-points li { text-align: justify; -webkit-hyphens: auto; hyphens: auto; }
+p.name, p.role, p.hello-lang, p.jr-hint, p.hc-authors, .dt-head p, .jr-empty p { text-align: inherit; -webkit-hyphens: manual; hyphens: manual; }
 button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 6px; }
 .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
