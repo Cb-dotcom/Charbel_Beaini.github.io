@@ -647,7 +647,8 @@
         var cs = getComputedStyle(el), ch = (el.textContent.trim()[0] || '');
         octx.font = cs.fontStyle + ' ' + cs.fontWeight + ' ' + cs.fontSize + ' ' + cs.fontFamily;
         var m = octx.measureText(ch);
-        el.style.marginLeft = (typeof m.actualBoundingBoxLeft === 'number' ? m.actualBoundingBoxLeft : 0) + 'px';
+        var hang = parseFloat(el.getAttribute('data-hang') || 0) * parseFloat(cs.fontSize);   // big titles look indented even when exact, so pull them back a touch
+        el.style.marginLeft = ((typeof m.actualBoundingBoxLeft === 'number' ? m.actualBoundingBoxLeft : 0) - hang) + 'px';
       });
     };
     align();
